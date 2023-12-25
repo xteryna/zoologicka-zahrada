@@ -1,0 +1,44 @@
+---
+layout: layouts/hlavni-sablona.njk
+---
+
+<!-- vložíme hlavičku stránky -->
+{% include 'partials/header.njk' %}
+
+<!-- přidáme menu -->
+{% include 'partials/menu.njk' %}
+
+<div class="kontejner">
+
+	<main class="main">
+
+		<!--
+			zde se vloží obsah stránky (nebo šablony),
+			která používá tuto šablonu
+		-->
+		{{ content | safe }}
+
+	</main>
+
+	<aside class="aside">
+
+		<h2>Nejnovější články na blogu</h2>
+
+		{% for prispevek in collections.blog | reverse | limit (3) %}
+
+			<article class="clanek">
+
+				<h2>{{ prispevek.data.title }}</h2>
+				<p>{{ prispevek.data.perex }}</p>
+				<p><a href="{{ prispevek.url }}">celý článek</a></p>
+
+			</article>
+
+		{% endfor %}
+
+	</aside>
+
+</div>
+
+<!-- vložíme patičku stránky -->
+{% include 'partials/footer.njk' %}

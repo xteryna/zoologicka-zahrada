@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+collections:
+  - name: "blog" # Jaká bude cesta ke kolekci v administraci,např. /admin/collections/novinky
+    label: "Blog" # Jak se kolekce jmenuje v UI administrace
+    folder: "blog" # Ve které složce jsou stránky/příspěvky uložené v Eleventy
+    create: true # Uživatel může přidávat nové stránky/příspěvky (nebo false, pokud nemůže)
+    slug: "{{slug}}" # Šablona jmen souborů, např. YYYY-MM-DD-title.md
+    fields: # Pole, která budeme editovat. Obvykle data uložená ve front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/clanek.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "foto", widget: "image", required: false }
+      - {label: "Perex", name: "perex", widget: "string"}
+      - {label: "Obsah", name: "body", widget: "markdown"}
+

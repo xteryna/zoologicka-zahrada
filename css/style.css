@@ -1,0 +1,226 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/zoo.jpg) no-repeat center/cover;
+  padding: 30px;
+}
+
+.header__logo {
+  margin: 0;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 0 4px rgba(0, 0, 0, 0.25)
+}
+
+.menu {
+  background-color: #4c7706;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu__item:not(:last-child) {
+  border-right: 1px solid  #3a5c04;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu__item--active .menu__link {
+  background-color: #1c2c02;
+  color: yellow;
+}
+
+.menu__link:hover, .menu__link:focus {
+  background-color: #1c2c02;
+  color: white;
+}
+
+.main {
+  margin: 30px 0;
+  padding: 30px;
+  border: 3px solid #b9b9b9;
+  overflow: auto;
+}
+
+.image {
+  width: 100%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.image--left {
+  max-width: 400px;
+  float: left;
+  margin: 0 30px 15px 0;
+}
+
+.image--right {
+  max-width: 400px;
+  float: right;
+  margin: 0 0 15px 30px;
+}
+
+.footer {
+  background-color: #e5e5e5;
+  padding: 30px;
+  text-align: center;
+}
+
+
+.article__title  {
+  font-size: 48px;
+  margin: 0;
+}
+
+.article__meta {
+  color: silver;
+}
+
+.article__perex {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+.clanek {
+  background-color: #e0f1c8;
+  padding: 30px;
+  margin: 30px 0;
+}
+
+
+.kontejner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.aside {
+  margin: 30px 0;
+  padding: 30px;
+  border: 3px solid #abc296;
+  overflow: auto;
+}
+
+.aside :first-child {
+  margin-top: 0;
+}
+
+
+
+.animals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.animals .animal {
+  background-color: #4c7706;
+  color: white;
+  text-align: center;
+}
+
+.animals .animal img {
+  width: 100%;
+  display: block;
+}
+
+.animals .animal__content {
+  padding: 20px;
+}
+
+.animals .animal__content :first-child {
+  margin-top: 0;
+}
+
+.animals .animal__content :last-child {
+  margin-bottom: 0;
+}
+
+.animals .animal h2 {
+  margin-bottom: 10px;
+}
+
+.animals .animal a {
+  color: white;
+}
+
+
+
+
+.animal-detail__title  {
+  font-size: 48px;
+  margin: 0;
+}
+
+.animal-detail__latin {
+  margin-top: 10px;
+  color: silver;
+}
+
+.animal-detail__content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px;
+}
+
+.animal-detail__image {
+  display: block;
+  width: 100%;
+}
+
+.article__perex {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.animal-detail__table {
+  /* width: 100%; */
+  margin: 30px 0;
+  border-top: 1px solid silver;
+}
+
+.animal-detail__table :is(td, th) {
+  padding: 10px 0;
+  border-bottom: 1px solid silver;
+}
+
+.animal-detail__table th {
+  color:#4c7706;
+  text-align: left;
+  padding-right: 20px;
+}

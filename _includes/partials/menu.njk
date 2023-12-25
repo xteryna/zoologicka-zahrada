@@ -1,0 +1,17 @@
+<nav class="menu">
+	<ul class="menu__list">
+
+		<li class="menu__item {{ 'menu__item--active' if page.fileSlug === '' }}">
+			<a href="/" class="menu__link">Úvod</a>
+		</li>
+
+		<li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'zvirata' }}">
+			<a href="/zvirata/" class="menu__link">Zvířata</a>
+		</li>
+
+		<li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'blog' }}">
+			<a href="/blog/" class="menu__link">Blog</a>
+		</li>
+
+	</ul>
+</nav>

@@ -1,0 +1,40 @@
+---
+layout: layouts/stranka.njk
+pagination: 
+  data: zvirata
+  size: 1
+  alias: zvire
+permalink: "zvirata/{{zvire.nazev | slug}}/"
+---
+
+<article class="animal-detail">
+	<h2 class="animal-detail__title">{{zvire.nazev}}</h2>
+	<h3 class="animal-detail__latin">{{zvire.nazevLatinsky}}}}</h3>
+
+	<div class="animal-detail__content">
+		<div class="animal-detail__text">
+			<p>{{zvire.popis}}}}</p>
+
+			<table class="animal-detail__table">
+				<tr>
+					<th>Domovina</th>
+					<td>{{zvire.domovina}}</td>
+				</tr>
+				<tr>
+					<th>Biotop</th>
+					<td>{{zvire.biotop}}</td>
+				</tr>
+				<tr>
+					<th>Potrava</th>
+					<td>{{zvire.potrava}}</td>
+				</tr>
+				<tr>
+					<th>Velikost</th>
+					<td>{{zvire.velikost}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<img class="animal-detail__image" src="/images/{{zvire.foto}}" alt="{{zvire.nazev}}">
+	</div>
+</article>

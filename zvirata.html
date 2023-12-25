@@ -1,0 +1,22 @@
+---
+layout: layouts/stranka.njk
+title: Zvířata
+---
+
+<h1>Naše zvířata</h1>
+
+{% for zvire in zvirata %}
+	<div class="animals">
+
+		<div class="animal">
+			<img class="animal__foto" src="/images/{{zvire.foto}}" alt="{{zvire.nazev}}">
+			<div class="animal__content">
+				<h2>{{ zvire.nazev }}</h2>
+				<p><a href="/zvirata/{{zvire.nazev | slug}}">Podrobný popis</a></p>
+			</div>
+		</div>
+
+	</div>
+{% endfor %}
+
+
