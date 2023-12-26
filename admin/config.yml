@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 media_folder: "images/uploads"
+slug:
+  encoding: "ascii"
+  clean_accents: true
 collections:
   - name: "blog" # Jaká bude cesta ke kolekci v administraci,např. /admin/collections/novinky
     label: "Blog" # Jak se kolekce jmenuje v UI administrace
